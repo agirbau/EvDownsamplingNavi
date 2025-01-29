@@ -11,7 +11,7 @@ parser.add_argument('-p', '--publisher_rate', type=int, default=33)
 
 args = parser.parse_args()
 
-data_folder = os.path.join(os.getcwd(), 'EvDownsampling', f'EvDownsampling_{args.data_folder}')
+data_folder = os.path.join(os.getcwd(), 'data', f'EvDownsampling_{args.data_folder}')
 os.makedirs(f'{data_folder}/numpy', exist_ok=True)
 
 with AedatFile(f'{data_folder}/aedat/EvDownsampling_{args.input}.aedat4') as f:
